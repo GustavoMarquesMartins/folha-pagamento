@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "71f17240-8a63-4055-9655-e7d94500bbf3",
+		"name": "FOLHA-PAGAMENTO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "14523842"
+	},
+	"item": [
+		{
+			"name": "teachers",
+			"item": [
+				{
+					"name": "teacher-add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"valueHour\": 0.00,\r\n  \"name\": \"name_83af615eec58\",\r\n  \"email\": \"email_3d28c05ac37c\",\r\n  \"address\": {\r\n    \"publicPlace\": \"publicPlace_3dfbc596d034\",\r\n    \"complement\": \"complement_e586725bc46d\",\r\n    \"neighborhood\": \"neighborhood_7d7cfa9722fc\",\r\n    \"city\": \"city_ac64da259209\",\r\n    \"number\": \"number_3039928e8189\",\r\n    \"state\": \"state_0881c96c17c2\",\r\n    \"zipCode\": \"zipCode_9e55e67e8c6c\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/folha-pagamento/teacher"
+					},
+					"response": []
+				},
+				{
+					"name": "teacher-delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"valueHour\": 0.00,\r\n  \"name\": \"name_83af615eec58\",\r\n  \"email\": \"email_3d28c05ac37c\",\r\n  \"address\": {\r\n    \"publicPlace\": \"publicPlace_3dfbc596d034\",\r\n    \"complement\": \"complement_e586725bc46d\",\r\n    \"neighborhood\": \"neighborhood_7d7cfa9722fc\",\r\n    \"city\": \"city_ac64da259209\",\r\n    \"number\": \"number_3039928e8189\",\r\n    \"state\": \"state_0881c96c17c2\",\r\n    \"zipCode\": \"zipCode_9e55e67e8c6c\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/folha-pagamento/teacher/31"
+					},
+					"response": []
+				},
+				{
+					"name": "teacher-delete Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"valueHour\": 0.00,\r\n  \"name\": \"name_83af615eec58\",\r\n  \"email\": \"email_3d28c05ac37c\",\r\n  \"address\": {\r\n    \"publicPlace\": \"publicPlace_3dfbc596d034\",\r\n    \"complement\": \"complement_e586725bc46d\",\r\n    \"neighborhood\": \"neighborhood_7d7cfa9722fc\",\r\n    \"city\": \"city_ac64da259209\",\r\n    \"number\": \"number_3039928e8189\",\r\n    \"state\": \"state_0881c96c17c2\",\r\n    \"zipCode\": \"zipCode_9e55e67e8c6c\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/folha-pagamento/teacher/53"
+					},
+					"response": []
+				},
+				{
+					"name": "teacher-findAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"valueHour\": 0.00,\r\n  \"name\": \"name_83af615eec58\",\r\n  \"email\": \"email_3d28c05ac37c\",\r\n  \"address\": {\r\n    \"publicPlace\": \"publicPlace_3dfbc596d034\",\r\n    \"complement\": \"complement_e586725bc46d\",\r\n    \"neighborhood\": \"neighborhood_7d7cfa9722fc\",\r\n    \"city\": \"city_ac64da259209\",\r\n    \"number\": \"number_3039928e8189\",\r\n    \"state\": \"state_0881c96c17c2\",\r\n    \"zipCode\": \"zipCode_9e55e67e8c6c\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/folha-pagamento/teacher"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
