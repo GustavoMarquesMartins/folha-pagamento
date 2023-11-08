@@ -1,0 +1,10 @@
+version: "3"
+services:
+  database-application:
+    image: mysql:8.0.35
+    environment:
+        - MYSQL_DATABASE=folha-pagamento
+        - MYSQL_ROOT_PASSWORD=
+        - MYSQL_ALLOW_EMPTY_PASSWORD=1
+    ports:
+      - 3306:3306
