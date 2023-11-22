@@ -5,17 +5,20 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TeacherDTO {
+public class CollaboratorCreateRequest {
+
     private Long id;
-    private String name;
-    private String email;
+
+    @NotBlank private String name;
+    @NotBlank private String email;
+
     private Address address;
-    private Float valueHour;
+
+    @NotNull private Float valueHour;
 }

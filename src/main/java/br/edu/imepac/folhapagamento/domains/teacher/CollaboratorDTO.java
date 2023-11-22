@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TeacherDTO {
+public class CollaboratorDTO {
     private Long id;
     private String name;
     private String email;
