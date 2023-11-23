@@ -39,13 +39,13 @@ public class CollaboratorController {
 
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
-    @RequestMapping(value = "/{id}",method = RequestMethod.GET)
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public CollaboratorDTO getCollaboratorById(@PathVariable("id") Long id) {
         return collaboratorService.findById(id);
     }
 
     @ResponseStatus(HttpStatus.OK)
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE )
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public void deleteCollaborator(@PathVariable("id") Long id) {
         collaboratorService.delete(id);
     }
