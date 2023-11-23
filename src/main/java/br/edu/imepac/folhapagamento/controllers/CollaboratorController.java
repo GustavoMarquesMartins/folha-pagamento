@@ -2,12 +2,8 @@ package br.edu.imepac.folhapagamento.controllers;
 
 import br.edu.imepac.folhapagamento.domains.teacher.CollaboratorCreateRequest;
 import br.edu.imepac.folhapagamento.domains.teacher.CollaboratorDTO;
-import br.edu.imepac.folhapagamento.domains.teacher.TeacherCreateRequest;
-import br.edu.imepac.folhapagamento.domains.teacher.TeacherDTO;
 import br.edu.imepac.folhapagamento.services.CollaboratorService;
-import br.edu.imepac.folhapagamento.services.TeacherService;
 import org.springframework.http.HttpStatus;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -53,7 +49,7 @@ public class CollaboratorController {
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
-    public CollaboratorDTO updateCollaborator(@PathVariable("id") Long id, @RequestBody CollaboratorCreateRequest collaboratorCreateRequest) {
+    public CollaboratorDTO updateCollaborator(@PathVariable("id") Long id, @RequestBody @Valid CollaboratorCreateRequest collaboratorCreateRequest) {
       return collaboratorService.update(id, collaboratorCreateRequest);
     }
 

@@ -28,8 +28,8 @@ public class Collaborator extends Employer {
         if (collaborator.getValueHour() != null) {
             this.setValueHour(collaborator.getValueHour());
         }
-        if (collaborator.getAddress() != null){
-           collaborator.setAddress(new Address(collaborator.getAddress()));
+        if (collaborator.getAddress() != null) {
+            this.getAddress().updateAdress(collaborator.getAddress());
         }
     }
 

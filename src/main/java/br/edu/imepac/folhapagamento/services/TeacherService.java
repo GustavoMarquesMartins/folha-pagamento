@@ -1,5 +1,7 @@
 package br.edu.imepac.folhapagamento.services;
 
+import br.edu.imepac.folhapagamento.domains.teacher.CollaboratorCreateRequest;
+import br.edu.imepac.folhapagamento.domains.teacher.CollaboratorDTO;
 import br.edu.imepac.folhapagamento.domains.teacher.TeacherCreateRequest;
 import br.edu.imepac.folhapagamento.domains.teacher.TeacherDTO;
 import br.edu.imepac.folhapagamento.entities.Teacher;
@@ -8,6 +10,7 @@ import lombok.Data;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -41,5 +44,12 @@ public class TeacherService {
 
     public TeacherDTO findById(Long id) {
         return modelMapper.map(teacherRepository.getReferenceById(id), TeacherDTO.class);
+    }
+
+    @Transactional
+    public TeacherDTO update(Long id, TeacherCreateRequest teacher) {
+        var teacherFound = this.teacherRepository.findById(id).orElseThrow(() -> new RuntimeException("Colaborador não foi encontrado."));
+        teacherFound.update(teacher);
+        return modelMapper.map(teacherFound,TeacherDTO.class);
     }
 }

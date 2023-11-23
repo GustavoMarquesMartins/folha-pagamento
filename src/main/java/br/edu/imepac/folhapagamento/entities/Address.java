@@ -20,34 +20,35 @@ public class Address {
     private String state;
     private String zipCode;
 
-    public Address(Address address) {
+    public void updateAdress(Address address) {
 
         if (address.getCity() != null) {
-            this.setCity(address.getCity());
+            this.city = address.getCity();
         }
 
         if (address.getComplement() != null) {
-            this.setComplement(address.getComplement());
+            this.complement = address.getComplement();
         }
 
         if (address.getState() != null) {
-            this.setState(address.getState());
+            this.state = address.getState();
         }
 
         if (address.getNeighborhood() != null) {
-            this.setNeighborhood(address.getNeighborhood());
+            this.neighborhood = address.getNeighborhood();
         }
+
         if (address.getNumber() != null) {
-            this.setNumber(address.getNumber());
+            this.number = address.getNumber();
         }
 
         if (address.getZipCode() != null) {
-            this.setZipCode(address.getZipCode());
+            this.zipCode = address.getZipCode();
         }
 
         if (address.getPublicPlace() != null) {
-            this.setCity(address.getPublicPlace());
+            this.publicPlace = address.getPublicPlace();
         }
-
     }
+
 }
