@@ -12,6 +12,7 @@ import lombok.Data;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.Arrays;
 import java.util.List;
 
@@ -38,11 +39,18 @@ public class CollaboratorService {
         return Arrays.asList(modelMapper.map(collaborators, CollaboratorDTO[].class));
     }
 
-    public void delete(Long id){
+    public void delete(Long id) {
         collaboratorRepository.deleteById(id);
     }
 
     public CollaboratorDTO findById(Long id) {
         return modelMapper.map(collaboratorRepository.getReferenceById(id), CollaboratorDTO.class);
     }
+    @Transactional
+    public CollaboratorDTO update(Long id, CollaboratorCreateRequest collaborator) {
+        var collaboratorFound = this.collaboratorRepository.findById(id).orElseThrow(() -> new RuntimeException("Colaborador não foi encontrado."));
+        collaboratorFound.update(collaborator);
+        return modelMapper.map(collaboratorFound,CollaboratorDTO.class);
+    }
+
 }

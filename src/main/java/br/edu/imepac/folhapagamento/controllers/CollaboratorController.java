@@ -50,4 +50,11 @@ public class CollaboratorController {
         collaboratorService.delete(id);
     }
 
+    @ResponseStatus(HttpStatus.OK)
+    @ResponseBody
+    @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
+    public CollaboratorDTO updateCollaborator(@PathVariable("id") Long id, @RequestBody CollaboratorCreateRequest collaboratorCreateRequest) {
+      return collaboratorService.update(id, collaboratorCreateRequest);
+    }
+
 }
