@@ -48,7 +48,6 @@ public class TeacherController {
     public void deleteTeacher(@PathVariable("id") Long id) {
         teacherService.delete(id);
     }
-
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
